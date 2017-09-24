@@ -2,7 +2,6 @@ var key = require('../utils/key');
 var request = require('request');
 var _ = require('underscore');
 
-
 // The Type Ahead API.
 module.exports = function(req, res) {
   var term = req.query.text.trim();
@@ -33,16 +32,14 @@ module.exports = function(req, res) {
     console.log(score);
     
     if(score){
-      console.log('Successful ', type, ' with term ', term);
       res.json([{
-        title: '<img style="width:100%" src='+imgint+'></img>',
-        text: img
+        title: data.resultMap.SECURITY[0].score,
       }]);
     } else {
       console.log('??? something happen');
       res.json([{
-      title: '<i>(no results)</i>',
-      text: ''
+        title: '<i>(no results)</i>',
+        text: ''
       }]);
     }
   })
