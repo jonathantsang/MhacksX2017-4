@@ -33,8 +33,8 @@ module.exports = function(req, res) {
     var sector = data.resultMap.SECURITY[0].gics1Sector;
     var description = data.resultMap.SECURITY[0].description;
     var currency = data.resultMap.SECURITY[0].currency;
-    
-    if(score){
+
+    if(assetClass && assetType && sector && description && currency){
       res.json([{
         aClass: assetClass,
         aType: assetType,
@@ -43,7 +43,6 @@ module.exports = function(req, res) {
         curr: currency,
       }]);
     } else {
-      console.log('??? something happen');
       res.json([{
         title: '<i>(no results)</i>',
         text: ''
