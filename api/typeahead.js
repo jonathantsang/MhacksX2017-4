@@ -35,6 +35,7 @@ module.exports = function(req, res) {
     var currency = data.resultMap.SECURITY[0].currency;
 
     if(assetClass && assetType && sector && description && currency){
+      console.log("complete");
       res.json([{
         aClass: assetClass,
         aType: assetType,
@@ -43,6 +44,7 @@ module.exports = function(req, res) {
         curr: currency,
       }]);
     } else {
+      console.log("incomplete");
       res.json([{
         title: '<i>(no results)</i>',
         text: ''
