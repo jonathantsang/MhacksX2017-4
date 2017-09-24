@@ -6,8 +6,6 @@ var _ = require('underscore');
 // The API that returns the in-email representation.
 module.exports = function(req, res) {
   var term = req.query.text.trim();
-  console.log("term " + term);
-  console.log(req);
   handleSearchString(term, req, res);
 };
 
