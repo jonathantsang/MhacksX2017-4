@@ -1,7 +1,7 @@
 {
-  "name": "blackrock slash command",
+  "name": "blackrock-slash-command",
   "version": "0.0.1",
-  "description": "blackrock slash command",
+  "description": "blackrock-slash-command",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
