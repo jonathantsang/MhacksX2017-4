@@ -7,6 +7,7 @@ var _ = require('underscore');
 module.exports = function(req, res) {
   var term = req.query.text.trim();
   console.log("term " + term);
+  console.log(req);
   handleSearchString(term, req, res);
 };
 
