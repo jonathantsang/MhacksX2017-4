@@ -43,6 +43,7 @@ module.exports = function(req, res) {
         descrip: description,
         curr: currency,
       };
+      console.log(data);
       res.json(data);
     } else {
       console.log("incomplete");
