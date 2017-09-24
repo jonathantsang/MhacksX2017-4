@@ -36,13 +36,14 @@ module.exports = function(req, res) {
 
     if(assetClass && assetType && sector && description && currency){
       console.log("complete");
-      res.json([{
+      var data = {
         aClass: assetClass,
         aType: assetType,
         sect: sector,
         descrip: description,
         curr: currency,
-      }]);
+      };
+      res.json(data);
     } else {
       console.log("incomplete");
       res.json([{
