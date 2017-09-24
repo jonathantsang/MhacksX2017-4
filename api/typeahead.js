@@ -39,7 +39,7 @@ module.exports = function(req, res) {
       var table = '<table style="width:100%"><tr><th>Stock Name</th><th>'+ description +'</th></tr><tr><td>Asset Class</td><td>' + assetClass + '</td></tr><tr><td>Asset Type</td><td>' + assetType +'</td></tr><tr><td>Sector</td><td>' + sector + '</td></td><tr><td>Currency</td><td>' + currency + '</td></td></table>';
       console.log("table" + table);
       res.json({
-        title: table
+        title: table,
         text: table
       });
     } else {
