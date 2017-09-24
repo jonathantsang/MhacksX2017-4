@@ -28,12 +28,19 @@ module.exports = function(req, res) {
       res.status(500).send('Error');
       return;
     }
-    var score = data.resultMap.SECURITY[0].score;
-    console.log(score);
+    var assetClass = data.resultMap.SECURITY[0].assetClass;
+    var assetType = data.resultMap.SECURITY[0].assetType;
+    var sector = data.resultMap.SECURITY[0].gics1Sector;
+    var description = data.resultMap.SECURITY[0].description;
+    var currency = data.resultMap.SECURITY[0].currency;
     
     if(score){
       res.json([{
-        title: data.resultMap.SECURITY[0].score,
+        aClass: assetClass,
+        aType: assetType,
+        sect: sector,
+        descrip: description,
+        curr: currency,
       }]);
     } else {
       console.log('??? something happen');
